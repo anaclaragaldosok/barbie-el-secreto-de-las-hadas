@@ -1,0 +1,1221 @@
+/* =========================================
+   BARBIE: EL SECRETO DE LAS HADAS
+   ESTILO GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #fff3f8;
+    color: #6d3155;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(239, 123, 177, 0.2);
+
+    box-shadow: 0 5px 25px rgba(220, 100, 160, 0.12);
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #e94f9a;
+
+    text-shadow: 0 0 12px rgba(233, 79, 154, 0.3);
+}
+
+
+/* MENÚ */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #8b476d;
+    font-weight: bold;
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #e94f9a;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   PORTADA / HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 130px 10% 80px;
+
+    position: relative;
+
+    background:
+        radial-gradient(circle at 80% 30%, #ffd4e9 0%, transparent 25%),
+        radial-gradient(circle at 20% 80%, #f6c4e4 0%, transparent 30%),
+        linear-gradient(135deg, #fff5fa, #ffd9ec, #f7c8e8);
+
+    overflow: hidden;
+}
+
+
+/* BRILLITOS DEL FONDO */
+
+.hero::before {
+    content: "✦  ✧  ✨  ✦  ✧  ✨  ✦";
+
+    position: absolute;
+
+    top: 18%;
+    right: 5%;
+
+    font-size: 40px;
+    letter-spacing: 25px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    animation: sparkle 4s infinite alternate;
+}
+
+.hero::after {
+    content: "♡";
+
+    position: absolute;
+
+    bottom: 10%;
+    right: 15%;
+
+    font-size: 180px;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    transform: rotate(-15deg);
+}
+
+
+/* TEXTO */
+
+.hero-text {
+    max-width: 700px;
+
+    animation: aparecer 1.2s ease;
+}
+
+.small-title {
+    color: #e94f9a;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 0.95;
+
+    color: #d93f8c;
+
+    text-shadow:
+        3px 3px 0 #fff,
+        0 8px 30px rgba(218, 63, 140, 0.25);
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    display: block;
+
+    font-size: 0.48em;
+
+    color: #8d4770;
+
+    letter-spacing: 2px;
+}
+
+.hero-text > p:not(.small-title) {
+    max-width: 550px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #70415b;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: white;
+    background: linear-gradient(135deg, #f783b8, #e94f9a);
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px rgba(233, 79, 154, 0.3);
+
+    transition: 0.35s ease;
+}
+
+.button:hover {
+    transform: translateY(-5px) scale(1.03);
+
+    box-shadow:
+        0 15px 35px rgba(233, 79, 154, 0.4);
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.section {
+    padding: 110px 8%;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.section-subtitle {
+    color: #e94f9a;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.section h2 {
+    font-size: clamp(38px, 5vw, 60px);
+
+    color: #c83e82;
+
+    margin-bottom: 55px;
+}
+
+
+/* SECCIÓN ROSA */
+
+.pink-section {
+    background:
+        linear-gradient(
+            135deg,
+            #ffd9ea,
+            #ffeaf4,
+            #f9cde5
+        );
+}
+
+
+/* =========================================
+   INFORMACIÓN DE LA PELÍCULA
+========================================= */
+
+.movie-info {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    text-align: left;
+}
+
+.movie-image {
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(190, 65, 125, 0.2);
+
+    transform: rotate(-2deg);
+
+    transition: 0.4s ease;
+}
+
+.movie-image:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.movie-image img {
+    width: 100%;
+
+    display: block;
+}
+
+.movie-text h3 {
+    font-size: 30px;
+
+    color: #d6468c;
+
+    margin-bottom: 20px;
+}
+
+.movie-text p {
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+.movie-data {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+.movie-data div {
+    background: white;
+
+    padding: 15px 18px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 20px rgba(190, 65, 125, 0.1);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.movie-data strong {
+    color: #e94f9a;
+}
+
+.movie-data span {
+    font-size: 14px;
+}
+
+
+/* =========================================
+   PERSONAJES
+========================================= */
+
+.characters {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.character-card {
+    background: rgba(255, 255, 255, 0.75);
+
+    border-radius: 28px;
+
+    padding: 15px;
+
+    box-shadow:
+        0 15px 35px rgba(180, 65, 125, 0.12);
+
+    transition: 0.4s ease;
+
+    overflow: hidden;
+}
+
+.character-card:hover {
+    transform: translateY(-12px) rotate(1deg);
+
+    box-shadow:
+        0 25px 45px rgba(180, 65, 125, 0.2);
+}
+
+.character-card img {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+}
+
+.character-card h3 {
+    color: #d83f89;
+
+    font-size: 22px;
+
+    margin: 18px 0 10px;
+}
+
+.character-card p {
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #795066;
+}
+
+
+/* =========================================
+   MUNDO DE LAS HADAS
+========================================= */
+
+.fairy-world {
+    background:
+        radial-gradient(circle at 10% 20%, #ead9ff, transparent 25%),
+        radial-gradient(circle at 90% 80%, #ffd4ed, transparent 25%),
+        #fff6fb;
+}
+
+.intro {
+    max-width: 650px;
+
+    margin: -30px auto 50px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+.fairy-cards {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.fairy-card {
+    padding: 35px 25px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 2px solid rgba(233, 79, 154, 0.15);
+
+    border-radius: 30px;
+
+    box-shadow: 0 15px 35px rgba(190, 65, 125, 0.1);
+
+    transition: 0.4s ease;
+}
+
+.fairy-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #f39bc5;
+}
+
+.fairy-card span {
+    font-size: 50px;
+
+    display: block;
+
+    margin-bottom: 15px;
+}
+
+.fairy-card h3 {
+    color: #d83f89;
+
+    margin-bottom: 12px;
+
+    font-size: 24px;
+}
+
+.fairy-card p {
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   GALERÍA
+========================================= */
+
+.gallery {
+    max-width: 1100px;
+
+    margin: auto;
+
+    columns: 3 250px;
+
+    column-gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    border-radius: 22px;
+
+    display: block;
+
+    box-shadow: 0 10px 25px rgba(190, 65, 125, 0.15);
+
+    transition: 0.4s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 20px 35px rgba(190, 65, 125, 0.25);
+}
+
+
+/* =========================================
+   CURIOSIDADES
+========================================= */
+
+.facts {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    gap: 20px;
+}
+
+.fact {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    text-align: left;
+
+    background: white;
+
+    padding: 25px 30px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 25px rgba(190, 65, 125, 0.1);
+
+    transition: 0.3s ease;
+}
+
+.fact:hover {
+    transform: translateX(8px);
+}
+
+.fact span {
+    font-size: 35px;
+}
+
+.fact p {
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   SECCIÓN FINAL
+========================================= */
+
+.final-section {
+    min-height: 60vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(circle, #f7a9d0, transparent 35%),
+        linear-gradient(135deg, #e94f9a, #c94a91);
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.final-section h2 {
+    max-width: 700px;
+
+    font-size: clamp(38px, 6vw, 70px);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.final-section p {
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+.final-section .button {
+    background: white;
+
+    color: #d83f89;
+}
+
+.sparkle {
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+    animation: sparkle 2s infinite alternate;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #7f315e;
+
+    color: #ffe5f1;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes sparkle {
+
+    from {
+        opacity: 0.4;
+        transform: scale(0.9) rotate(-5deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.1) rotate(5deg);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — CELULAR
+========================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .movie-info {
+        grid-template-columns: 1fr;
+    }
+
+    .characters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fairy-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 150px 7% 80px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .characters {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 80px 6%;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+}
+ /* =========================================
+    ✨ EFECTOS DEL JAVASCRIPT
+ ========================================= */
+
+.floating-sparkle {
+    position: fixed;
+
+    top: -30px;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    color: white;
+
+    text-shadow:
+        0 0 8px #ffffff,
+        0 0 15px #f783b8;
+
+    animation: floatDown linear forwards;
+}
+
+@keyframes floatDown {
+
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+
+/* 💗 CORAZONES */
+
+.click-heart {
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 10000;
+
+    font-size: 25px;
+
+    color: #f05b9f;
+
+    animation: heartFloat 1s ease-out forwards;
+}
+
+@keyframes heartFloat {
+
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-80px)
+            scale(1.4);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* 🌸 APARICIÓN DE SECCIONES */
+
+.hidden {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ✨ EFECTO MÁGICO */
+
+.magic-effect {
+    animation: magicFlash 1s ease;
+}
+
+@keyframes magicFlash {
+
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.25);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+
+}
+
+
+/* 📸 GALERÍA AMPLIADA */
+
+.image-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 20000;
+
+    background: rgba(90, 25, 65, 0.82);
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+.image-overlay.active {
+    opacity: 1;
+}
+
+.image-container {
+    position: relative;
+
+    max-width: 800px;
+
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+
+    max-height: 75vh;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.image-container p {
+    color: white;
+
+    margin-top: 15px;
+
+    font-size: 17px;
+}
+
+.close-gallery {
+    position: absolute;
+
+    right: -15px;
+    top: -15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #d83f89;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+.close-gallery:hover {
+    transform: rotate(90deg) scale(1.1);
+}
+
+
+/* 🎀 ENLACE ACTIVO */
+
+nav a.active {
+    color: #e94f9a;
+
+    text-shadow:
+        0 0 10px rgba(233, 79, 154, 0.3);
+}
+/* =========================================
+   ✨ CURSOR MÁGICO
+========================================= */
+
+.magic-cursor {
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 30000;
+
+    color: #f783b8;
+
+    font-size: 16px;
+
+    text-shadow:
+        0 0 6px white,
+        0 0 12px #f783b8;
+
+    transform: translate(-50%, -50%);
+
+    animation: cursorSparkle 0.8s ease-out forwards;
+}
+
+@keyframes cursorSparkle {
+
+    0% {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            scale(0.5)
+            rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--random-x, 10px)),
+                calc(-50% - 25px)
+            )
+            scale(1.5)
+            rotate(180deg);
+    }
+
+}
+/* =========================================
+   💌 CARTAS MÁGICAS
+========================================= */
+
+.magic-letters {
+    padding: 110px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            #ffd5e9,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            #e8d5ff,
+            transparent 30%
+        ),
+        #fff5fa;
+}
+
+.magic-letters h2 {
+    color: #c83e82;
+
+    font-size: clamp(38px, 5vw, 60px);
+
+    margin-bottom: 15px;
+}
+
+.letters-intro {
+    font-size: 17px;
+
+    margin-bottom: 45px;
+}
+
+
+/* CARTA */
+
+.letter {
+    width: min(90%, 500px);
+
+    min-height: 350px;
+
+    margin: auto;
+
+    position: relative;
+
+    perspective: 1000px;
+}
+
+
+/* PARTE DELANTERA */
+
+.letter-front,
+.letter-message {
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 45px 35px;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition:
+        transform 0.7s ease,
+        opacity 0.5s ease;
+
+}
+
+
+/* CARTA CERRADA */
+
+.letter-front {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffb9d9,
+            #f783b8
+        );
+
+    color: white;
+
+    box-shadow:
+        0 20px 50px
+        rgba(200, 62, 130, 0.25);
+
+    z-index: 2;
+}
+
+.letter-icon {
+    font-size: 65px;
+
+    margin-bottom: 15px;
+}
+
+.letter-front h3 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.letter-front p {
+    margin-bottom: 25px;
+}
+
+
+/* BOTÓN */
+
+.letter-front button,
+.letter-message button {
+
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: #d83f89;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.letter-front button:hover,
+.letter-message button:hover {
+
+    transform: scale(1.06);
+
+    box-shadow:
+        0 8px 20px
+        rgba(255, 255, 255, 0.3);
+}
+
+
+/* MENSAJE */
+
+.letter-message {
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff,
+            #ffe8f3
+        );
+
+    color: #70415b;
+
+    box-shadow:
+        0 20px 50px
+        rgba(200, 62, 130, 0.2);
+
+    opacity: 0;
+
+    transform: scale(0.8);
+}
+
+.letter-message > span {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+.letter-message p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 380px;
+
+    margin-bottom: 25px;
+
+    transition: opacity 0.25s ease;
+}
+
+
+/* CARTA ABIERTA */
+
+.letter.opened .letter-front {
+
+    transform: rotateY(90deg);
+
+    opacity: 0;
+}
+
+.letter.opened .letter-message {
+
+    transform: scale(1);
+
+    opacity: 1;
+}
